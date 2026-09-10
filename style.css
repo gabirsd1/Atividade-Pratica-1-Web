@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza no PC */
+    align-items: center;
+    height: 100vh;
+    background-color: #111; /* Fundo escuro atrás do jogo no PC */
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden; /* Remove barras de rolagem */
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Largura máxima para não ficar esticado no PC */
+    height: 100vh; /* Altura 100% da tela */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* Sombra para destacar */
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #333;
+    text-align: center;
+}
+
+h1#title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 55px;
+    margin: 0 0 10px;
+    color: #ffffff;
+    text-shadow: 4px 4px 4px #000, 4px 4px 10px rgba(0,0,0,0.1);
+}
+
+#message {
+    font-size: 18px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+#score-text { 
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    color: #111;
+}
+
+button {
+    padding: 15px 35px;
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    background: linear-gradient(to right, #0d1951, #183776);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(252, 96, 118, 0.4);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.05);
+}
